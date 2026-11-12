@@ -1,13 +1,12 @@
-
-import { useState } from 'react';
-import '../style/Navbar.css';
+import { useState } from "react";
+import "../style/Navbar.css";
 
 const links = [
-  { label: 'Home', path: '/' },
-  { label: 'Staff & Exco', path: '/staff-exco' },
-  { label: 'Projects', path: '/project' },
-  { label: 'Events', path: '/events' },
-  { label: 'More info', path: '/more-info' },
+  { label: "Home", path: "/" },
+  { label: "Staff & Exco", path: "/staff-exco" },
+  { label: "Projects", path: "/project" },
+  { label: "Events", path: "/events" },
+  { label: "More info", path: "/more-info" },
 ];
 
 export default function Navbar({ activePath, onNavigate }) {
@@ -20,16 +19,43 @@ export default function Navbar({ activePath, onNavigate }) {
 
   return (
     <header className="site-header">
-      <a className="brand" href="/" onClick={(event) => handleNavigate(event, '/')}>
+      <a
+        className="brand"
+        href="/"
+        onClick={(event) => handleNavigate(event, "/")}
+      >
         <img className="brand-logo" src="/nadss-logo.png" alt="" />
-        <span className="brand-copy"><strong>NADSS</strong><small>Nigeria Association of Data Science Students @ OSUN STATE UNIVERSITY</small></span>
+        <span className="brand-copy">
+          <strong>NADSS</strong>
+          <small>
+            Nigeria Association of Data Science Students @ OSUN STATE UNIVERSITY
+          </small>
+        </span>
       </a>
-      <button className="menu-toggle" type="button" aria-label={menuOpen ? 'Close navigation menu' : 'Open navigation menu'} aria-expanded={menuOpen} onClick={() => setMenuOpen((open) => !open)}>
-        <span /><span />
+      <button
+        className="menu-toggle"
+        type="button"
+        aria-label={menuOpen ? "Close navigation menu" : "Open navigation menu"}
+        aria-expanded={menuOpen}
+        onClick={() => setMenuOpen((open) => !open)}
+      >
+        <span />
+        <span />
       </button>
-      <nav className={`main-nav${menuOpen ? ' nav-open' : ''}`} aria-label="Main navigation">
+      <nav
+        className={`main-nav${menuOpen ? " nav-open" : ""}`}
+        aria-label="Main navigation"
+      >
         {links.map(({ label, path }) => (
-          <a className={activePath === path ? 'nav-link active' : 'nav-link'} href={path} aria-current={activePath === path ? 'page' : undefined} onClick={(event) => handleNavigate(event, path)} key={path}>{label}</a>
+          <a
+            className={activePath === path ? "nav-link active" : "nav-link"}
+            href={path}
+            aria-current={activePath === path ? "page" : undefined}
+            onClick={(event) => handleNavigate(event, path)}
+            key={path}
+          >
+            {label}
+          </a>
         ))}
       </nav>
     </header>

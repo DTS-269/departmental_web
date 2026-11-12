@@ -1,0 +1,51 @@
+.site-footer {
+  padding: 41px 7.2% 19px;
+  background: #f4f7f8;
+}
+
+.footer-main {
+  padding-bottom: 31px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  align-items: start;
+  gap: 25px;
+  text-align: left;
+}
+
+.footer-main > p {
+  color: var(--muted);
+  font-size: 10px;
+  line-height: 1.7;
+}
+
+.footer-brand .brand-logo {
+  width: 42px;
+  height: 42px;
+}
+
+.footer-links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  gap: 12px 20px;
+}
+
+.footer-links a {
+  color: var(--muted);
+  font-size: 10px;
+  text-decoration: none;
+}
+
+.footer-links a:hover {
+  color: var(--green);
+}
+
+.footer-bottom {
+  padding-top: 14px;
+  display: flex;
+  justify-content: space-between;
+  gap: 15px;
+  border-top: 1px solid var(--line);
+  color: #85887e;
+  font-size: 9px;
+}
