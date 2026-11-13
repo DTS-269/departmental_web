@@ -7,7 +7,8 @@
   gap: 32px;
   background: var(--paper);
   border-bottom: 1px solid var(--line);
-  position: relative;
+  position: sticky;
+  top: 0;
   z-index: 5;
 }
 
@@ -73,7 +74,7 @@
 
 .nav-link.active::after {
   position: absolute;
-  content: '';
+  content: "";
   height: 2px;
   background: var(--green);
   left: 0;
@@ -148,7 +149,10 @@
     opacity: 0;
     visibility: hidden;
     transform: translateX(100%);
-    transition: transform 220ms ease, opacity 220ms ease, visibility 0s linear 220ms;
+    transition:
+      transform 220ms ease,
+      opacity 220ms ease,
+      visibility 0s linear 220ms;
   }
 
   .main-nav.nav-open {
